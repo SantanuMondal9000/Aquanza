@@ -1,0 +1,476 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8f8f8;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+a:hover:not(.primary-blue-btn):not(.secondary-white-btn) {
+  color: #3c83db !important;
+}
+
+p {
+  opacity: 0.5;
+  font-weight: 100;
+}
+
+.primary-blue-btn, .secondary-white-btn {
+  background-color: #3c83db;
+  padding: 20px 40px;
+  border-radius: 13px;
+  color: white !important;
+  transition: background-color 0.4s ease;
+  position: relative;
+  text-transform: initial;
+}
+.primary-blue-btn:hover, .secondary-white-btn:hover {
+  background-color: rgb(12, 15, 22);
+}
+.primary-blue-btn::after, .secondary-white-btn::after {
+  background-image: url("../asstest/icons/right-arrow.svg");
+  right: 15px !important;
+  filter: invert(1);
+  width: 15px !important;
+  height: 15px !important;
+}
+
+.secondary-white-btn {
+  background-color: white;
+  color: black !important;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+.secondary-white-btn:hover {
+  background-color: #3c83db;
+  color: white !important;
+}
+.secondary-white-btn:hover::after {
+  filter: invert(1);
+}
+.secondary-white-btn::after {
+  filter: invert(0);
+}
+
+.icon-after, footer .footer-menu .mail-input::after, footer .footer-wrapper .footer-contact-part ul li:first-child::after, .contact .contact-wrapper .contact-profile a::after, .delivery-service .delivery-service-wrapper .delivery-service-area .delivery-service-item ul li::after, .delivery .delivery-option .delivery-option-item a::after, .header-wrapper .contact-part ul li:first-child::after, .primary-blue-btn::after, .secondary-white-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.call-anchor:hover {
+  color: #3c83db;
+}
+
+p span a {
+  text-decoration: underline;
+}
+
+header {
+  background-color: rgb(255, 255, 255);
+}
+
+nav ul {
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  margin-left: 30px;
+}
+nav ul li {
+  border-bottom: 4px solid transparent;
+  transition: border 0.4s ease;
+}
+nav ul li a {
+  text-transform: capitalize;
+  padding: 12px 25px;
+  opacity: 0.5;
+  color: black;
+}
+nav ul li:hover {
+  border-bottom: 4px solid #3c83db;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+}
+.header-wrapper .logo-part {
+  flex-basis: 60%;
+  align-items: center;
+}
+.header-wrapper .contact-part {
+  flex-basis: 40%;
+  justify-content: end;
+}
+.header-wrapper .contact-part ul {
+  align-items: center;
+  gap: 40px;
+}
+.header-wrapper .contact-part ul li a {
+  color: black;
+  padding: 15px 48px;
+}
+.header-wrapper .contact-part ul li:first-child {
+  font-size: 1.3rem;
+  font-weight: 500;
+  position: relative;
+  padding-left: 18px;
+}
+.header-wrapper .contact-part ul li:first-child::after {
+  background-image: url("../asstest/icons/call.svg");
+  left: 35px;
+}
+
+.banner .banner-wrapper .banner-heading-part {
+  padding: 100px 0;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.banner .banner-wrapper .banner-heading-part *:not(:last-child) {
+  margin-bottom: 40px;
+}
+.banner .banner-wrapper .banner-heading-part h1 {
+  font-size: 4rem;
+  max-width: 70%;
+  margin: 0 auto;
+  font-weight: 500;
+}
+.banner .banner-wrapper .banner-heading-part p {
+  font-size: 1.3rem;
+}
+.banner .banner-wrapper .banner-heading-part ul {
+  justify-content: center;
+  gap: 30px;
+}
+.banner .banner-wrapper .banner-image-block {
+  text-align: center;
+}
+
+.delivery {
+  padding: 80px 0;
+}
+.delivery .delivery-wrapper {
+  text-align: center;
+}
+.delivery .delivery-wrapper h2,
+.delivery .delivery-wrapper p,
+.delivery .delivery-wrapper .delivery-area,
+.delivery .delivery-wrapper .delivery-option {
+  margin-bottom: 40px !important;
+}
+.delivery .delivery-wrapper h2 {
+  font-size: 3rem;
+  max-width: 60%;
+  margin: 0 auto;
+}
+.delivery .delivery-wrapper p {
+  font-size: 1.2rem;
+}
+.delivery .delivery-area .delivery-item {
+  text-align: center;
+}
+.delivery .delivery-area .delivery-item h3 {
+  font-size: 1.2rem;
+  max-width: 60%;
+  margin: 0 auto;
+}
+.delivery .delivery-option {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.delivery .delivery-option .delivery-option-item {
+  margin: 0;
+  padding: 35px;
+  text-align: left;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.delivery .delivery-option .delivery-option-item img {
+  margin-bottom: 20px;
+}
+.delivery .delivery-option .delivery-option-item h4 {
+  margin: 0;
+}
+.delivery .delivery-option .delivery-option-item a {
+  color: black;
+  text-transform: initial;
+  position: relative;
+  padding-right: 25px;
+  font-size: 1.3rem;
+}
+.delivery .delivery-option .delivery-option-item a:hover {
+  color: #3c83db;
+}
+.delivery .delivery-option .delivery-option-item a::after {
+  background-image: url("../asstest/icons/right-arrow.svg");
+}
+
+.delivery-service .delivery-service-wrapper .delivery-service-area {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 100px;
+}
+.delivery-service .delivery-service-wrapper .delivery-service-area .delivery-service-item {
+  flex-basis: 50%;
+}
+.delivery-service .delivery-service-wrapper .delivery-service-area .delivery-service-item h2,
+.delivery-service .delivery-service-wrapper .delivery-service-area .delivery-service-item p,
+.delivery-service .delivery-service-wrapper .delivery-service-area .delivery-service-item ul {
+  margin-bottom: 20px;
+}
+.delivery-service .delivery-service-wrapper .delivery-service-area .delivery-service-item h2 {
+  font-size: 2.8rem;
+}
+.delivery-service .delivery-service-wrapper .delivery-service-area .delivery-service-item ul li {
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 10px 0;
+  position: relative;
+  padding-left: 30px;
+}
+.delivery-service .delivery-service-wrapper .delivery-service-area .delivery-service-item ul li::after {
+  background-image: url("../asstest/icons/right-icon.svg");
+  left: 0;
+  top: 35%;
+}
+.delivery-service .delivery-service-wrapper .delivery-service-area .delivery-service-item p {
+  font-size: 1.2rem;
+}
+.delivery-service .delivery-service-wrapper .delivery-service-area .delivery-service-item:nth-child(1), .delivery-service .delivery-service-wrapper .delivery-service-area .delivery-service-item:nth-child(4) {
+  padding: 80px;
+}
+.delivery-service .delivery-service-wrapper .delivery-service-area .delivery-service-item:nth-child(1) {
+  padding-left: 0;
+}
+
+.order {
+  background-image: url("../asstest/images/Rectangle-1.png");
+  background-size: cover;
+  background-position: center;
+}
+.order .order-wrapper {
+  padding: 130px 0;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+.order .order-wrapper *:not(:last-child) {
+  margin-bottom: 40px;
+}
+.order .order-wrapper h2 {
+  font-size: 3.7rem;
+  max-width: 50%;
+  margin: 0 auto;
+}
+.order .order-wrapper h2 span {
+  text-transform: capitalize;
+}
+.order .order-wrapper p {
+  opacity: 0.9;
+}
+
+.contact {
+  padding: 130px 0;
+}
+.contact .contact-wrapper {
+  display: flex;
+}
+.contact .contact-wrapper h4 {
+  font-size: 1.4rem;
+}
+.contact .contact-wrapper h3 {
+  font-size: 2.3rem;
+}
+.contact .contact-wrapper p {
+  font-size: 1.2rem;
+  max-width: 75%;
+}
+.contact .contact-wrapper .contact-profile *:not(:last-child),
+.contact .contact-wrapper .contact-form *:not(:last-child) {
+  margin-bottom: 30px;
+}
+.contact .contact-wrapper .contact-profile {
+  flex-basis: 50%;
+}
+.contact .contact-wrapper .contact-profile .profile-image {
+  display: flex;
+  gap: 30px;
+}
+.contact .contact-wrapper .contact-profile .profile-image img {
+  border-radius: 50%;
+}
+.contact .contact-wrapper .contact-profile h3 {
+  margin-top: 10px;
+  max-width: 30%;
+}
+.contact .contact-wrapper .contact-profile a {
+  color: black;
+  font-size: 2.3rem;
+  font-weight: 500;
+  position: relative;
+  padding-left: 40px;
+}
+.contact .contact-wrapper .contact-profile a::after {
+  left: 0;
+  width: 35px;
+  height: 35px;
+  background-image: url("../asstest/icons/call.svg");
+}
+.contact .contact-wrapper .contact-profile p:last-of-type {
+  color: black;
+  opacity: 1;
+  font-size: 1.3rem;
+}
+.contact .contact-wrapper .contact-form {
+  flex-basis: 50%;
+}
+.contact .contact-wrapper .contact-form form label {
+  opacity: 0.6;
+}
+.contact .contact-wrapper .contact-form form input,
+.contact .contact-wrapper .contact-form form label {
+  display: block;
+  text-transform: capitalize;
+  margin: 0 !important;
+}
+.contact .contact-wrapper .contact-form form input {
+  margin-bottom: 30px !important;
+}
+.contact .contact-wrapper .contact-form form input[type=text] {
+  width: 100%;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  outline: none;
+}
+.contact .contact-wrapper .contact-form form input[type=text]::-moz-placeholder {
+  color: black;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.contact .contact-wrapper .contact-form form input[type=text]::placeholder {
+  color: black;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.contact .contact-wrapper .contact-form form .radio-group {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 22px;
+}
+.contact .contact-wrapper .contact-form form .radio-group input {
+  width: 20px;
+  border-radius: 50%;
+  margin: 0 !important;
+}
+.contact .contact-wrapper .contact-form form .radio-group .radio-item {
+  margin: 0;
+  display: flex;
+  gap: 8px;
+}
+.contact .contact-wrapper .contact-form form .privacy-terms {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.contact .contact-wrapper .contact-form form .privacy-terms input[type=checkbox],
+.contact .contact-wrapper .contact-form form .privacy-terms p {
+  margin: 0 !important;
+}
+.contact .contact-wrapper .contact-form form .privacy-terms p {
+  max-width: 100%;
+}
+.contact .contact-wrapper .contact-form form .privacy-terms p a {
+  text-decoration: underline;
+}
+
+footer {
+  padding: 100px 0;
+  background-color: #273549;
+}
+footer .footer-wrapper {
+  display: flex;
+  color: white;
+}
+footer .footer-wrapper .footer-contact-part,
+footer .footer-wrapper .footer-menu {
+  flex-basis: 50%;
+}
+footer .footer-wrapper .footer-contact-part p {
+  opacity: 1;
+  max-width: 60%;
+  font-size: 1.2rem;
+}
+footer .footer-wrapper .footer-contact-part p:nth-child(3) {
+  margin-top: 50px;
+  max-width: 40%;
+}
+footer .footer-wrapper .footer-contact-part a {
+  color: white;
+}
+footer .footer-wrapper .footer-contact-part ul li:first-child {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 40px;
+}
+footer .footer-wrapper .footer-contact-part ul li:first-child::after {
+  left: 0;
+  width: 35px;
+  height: 35px;
+  background-image: url("../asstest/icons/call.svg");
+}
+footer .footer-wrapper .footer-contact-part .email-anchor {
+  text-decoration: underline !important;
+}
+footer .footer-menu h3 {
+  font-size: 3rem;
+}
+footer .footer-menu p span a {
+  color: white;
+}
+footer .footer-menu .mail-input {
+  position: relative;
+}
+footer .footer-menu .mail-input::after {
+  background-image: url("../asstest/icons/mail.svg");
+  width: 30px;
+  height: 30px;
+  right: 20px;
+}
+footer .footer-menu input {
+  width: 100%;
+  padding: 18px;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  outline: none;
+  border: none;
+  padding-right: 50px;
+}
+footer .footer-menu input::-moz-placeholder {
+  color: black;
+}
+footer .footer-menu input::placeholder {
+  color: black;
+}
+footer .footer-menu .footer-menu-area .footer-menu-item {
+  margin-top: 30px;
+  text-transform: capitalize;
+}
+footer .footer-menu .footer-menu-area .footer-menu-item ul li a {
+  color: white;
+  padding: 8px 0;
+}/*# sourceMappingURL=style.css.map */

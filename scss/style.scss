@@ -1,0 +1,666 @@
+@import 'variable';
+
+// Reset part
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f8f8;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    transition: color 0.4s ease;
+
+    &:hover:not(.primary-blue-btn) {
+        color: $primary-blue-color !important;
+    }
+}
+
+p {
+    opacity: 0.5;
+    font-weight: 100;
+}
+
+// End Reset part
+//Default area
+.primary-blue-btn {
+    background-color: $primary-blue-color;
+    padding: 20px 40px;
+    border-radius: 13px;
+    color: white !important;
+    transition: background-color 0.4s ease;
+    position: relative;
+    text-transform: initial;
+
+    &:hover {
+        background-color: rgb(12, 15, 22)
+    }
+
+    &::after {
+        @extend .icon-after;
+        background-image: url("../asstest/icons/right-arrow.svg");
+        right: 15px !important;
+        filter: invert(1);
+        width: 15px !important;
+        height: 15px !important;
+    }
+
+
+}
+
+.secondary-white-btn {
+    @extend .primary-blue-btn;
+    background-color: white;
+    color: black !important;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+        background-color: $primary-blue-color;
+        color: white !important;
+
+        &::after {
+            filter: invert(1)
+        }
+
+    }
+
+    &::after {
+        filter: invert(0)
+    }
+}
+
+.icon-after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.call-anchor {
+    &:hover {
+        color: $primary-blue-color;
+    }
+}
+
+p {
+    span {
+        a {
+
+            text-decoration: underline;
+        }
+    }
+}
+
+// End Default
+// Header part
+header {
+    background-color: rgb(255, 255, 255);
+}
+
+nav {
+    ul {
+        border-left: 1px solid rgba(0, 0, 0, 0.2);
+        margin-left: 30px;
+
+        li {
+            border-bottom: 4px solid transparent;
+            transition: border 0.4s ease;
+
+            a {
+                text-transform: capitalize;
+                padding: 12px 25px;
+                opacity: 0.5;
+                color: black;
+
+
+
+            }
+
+            &:hover {
+                border-bottom: 4px solid $primary-blue-color;
+            }
+        }
+    }
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+
+
+    .logo-part {
+        flex-basis: 60%;
+        align-items: center;
+
+
+    }
+
+    .contact-part {
+        flex-basis: 40%;
+        justify-content: end;
+
+        ul {
+            align-items: center;
+            gap: 40px;
+
+            li {
+                a {
+                    color: black;
+                    padding: 15px 48px;
+                }
+
+                &:first-child {
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    position: relative;
+                    padding-left: 18px;
+
+                    &::after {
+                        @extend .icon-after;
+                        background-image: url("../asstest/icons/call.svg");
+                        left: 35px;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+// End Header
+
+// Banner
+.banner {
+    .banner-wrapper {
+        .banner-heading-part {
+            padding: 100px 0;
+            padding-bottom: 10px;
+            text-align: center;
+
+            *:not(:last-child) {
+                margin-bottom: 40px;
+            }
+
+            h1 {
+                font-size: 4rem;
+                max-width: 70%;
+                margin: 0 auto;
+                font-weight: 500;
+
+            }
+
+
+
+            p {
+                font-size: 1.3rem;
+            }
+
+            ul {
+                justify-content: center;
+                gap: 30px;
+            }
+        }
+
+        .banner-image-block {
+            text-align: center;
+        }
+    }
+}
+
+// End Banner
+
+// Delivary area
+.delivery {
+    padding: 80px 0;
+
+    .delivery-wrapper {
+        text-align: center;
+
+        h2,
+        p,
+        .delivery-area,
+        .delivery-option {
+            margin-bottom: 40px !important;
+        }
+
+        h2 {
+            font-size: 3rem;
+            max-width: 60%;
+            margin: 0 auto;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+    }
+
+    .delivery-area {
+        .delivery-item {
+            text-align: center;
+
+            h3 {
+                font-size: 1.2rem;
+                max-width: 60%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .delivery-option {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+
+
+        .delivery-option-item {
+            margin: 0;
+            padding: 35px;
+            text-align: left;
+            box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+
+            img {
+                margin-bottom: 20px;
+            }
+
+            h4 {
+                margin: 0;
+            }
+
+            a {
+                color: black;
+                text-transform: initial;
+                position: relative;
+                padding-right: 25px;
+                font-size: 1.3rem;
+
+                &:hover {
+                    color: $primary-blue-color;
+                }
+
+                &::after {
+                    @extend .icon-after;
+                    background-image: url("../asstest/icons/right-arrow.svg");
+                }
+            }
+        }
+    }
+}
+
+// End Delivary area
+
+// Delivery service{
+.delivery-service {
+    .delivery-service-wrapper {
+        .delivery-service-area {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 100px;
+
+            .delivery-service-item {
+                flex-basis: 50%;
+
+                h2,
+                p,
+                ul {
+                    margin-bottom: 20px;
+                }
+
+                h2 {
+                    font-size: 2.8rem;
+                }
+
+                ul {
+                    li {
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                        padding: 10px 0;
+                        position: relative;
+                        padding-left: 30px;
+
+                        &::after {
+                            @extend .icon-after;
+                            background-image: url("../asstest/icons/right-icon.svg");
+                            left: 0;
+                            top: 35%;
+                        }
+                    }
+                }
+
+                p {
+                    font-size: 1.2rem;
+                }
+
+                &:nth-child(1),
+                &:nth-child(4) {
+                    padding: 80px;
+
+                }
+
+                &:nth-child(1) {
+                    padding-left: 0;
+
+                }
+            }
+        }
+    }
+}
+
+// End Delivery
+// Order
+.order {
+    background-image: url("../asstest/images/Rectangle-1.png");
+    background-size: cover;
+    background-position: center;
+
+    .order-wrapper {
+        padding: 130px 0;
+        text-align: center;
+        color: rgb(255, 255, 255);
+
+        *:not(:last-child) {
+            margin-bottom: 40px;
+        }
+
+
+        h2 {
+
+            font-size: 3.7rem;
+            max-width: 50%;
+            margin: 0 auto;
+
+            span {
+                text-transform: capitalize;
+
+            }
+        }
+
+        p {
+            opacity: 0.9;
+        }
+    }
+}
+
+// End Order
+
+// Contact
+.contact {
+    padding: 130px 0;
+
+    .contact-wrapper {
+        display: flex;
+
+
+
+        h4 {
+            font-size: 1.4rem;
+        }
+
+        h3 {
+            font-size: 2.3rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            max-width: 75%;
+
+        }
+
+        .contact-profile,
+        .contact-form {
+            *:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+
+        .contact-profile {
+            flex-basis: 50%;
+
+            .profile-image {
+                display: flex;
+                gap: 30px;
+
+                img {
+                    border-radius: 50%;
+                }
+            }
+
+            h3 {
+                margin-top: 10px;
+                max-width: 30%;
+            }
+
+            a {
+                color: black;
+                font-size: 2.3rem;
+                font-weight: 500;
+                position: relative;
+                padding-left: 40px;
+
+                &::after {
+                    @extend .icon-after;
+                    left: 0;
+                    width: 35px;
+                    height: 35px;
+                    background-image: url("../asstest/icons/call.svg");
+                }
+            }
+
+            p:last-of-type {
+                color: black;
+                opacity: 1;
+                font-size: 1.3rem;
+
+            }
+        }
+
+        .contact-form {
+            flex-basis: 50%;
+
+            form {
+                label {
+                    opacity: 0.6;
+                }
+
+                input,
+                label {
+                    display: block;
+                    text-transform: capitalize;
+                    margin: 0 !important;
+
+                }
+
+                input {
+                    margin-bottom: 30px !important;
+                }
+
+                input[type="text"] {
+                    width: 100%;
+                    padding: 20px;
+                    background-color: rgb(255, 255, 255);
+                    border: none;
+                    outline: none;
+
+                    &::placeholder {
+                        color: black;
+                        font-weight: 500;
+                        font-size: 1.2rem;
+
+                    }
+                }
+
+                .radio-group {
+                    display: flex;
+                    justify-content: left;
+                    align-items: center;
+                    gap: 22px;
+
+                    input {
+                        width: 20px;
+                        border-radius: 50%;
+                        margin: 0 !important;
+                    }
+
+                    .radio-item {
+                        margin: 0;
+                        display: flex;
+                        gap: 8px;
+                    }
+                }
+
+                .privacy-terms {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    input[type="checkbox"],
+                    p {
+                        margin: 0 !important;
+                    }
+
+                    p {
+                        max-width: 100%;
+
+                        a {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// End Contact
+// Footer
+footer {
+    padding: 100px 0;
+    background-color: #273549;
+
+    .footer-wrapper {
+        display: flex;
+        color: white;
+
+        .footer-contact-part,
+        .footer-menu {
+            flex-basis: 50%;
+        }
+
+        .footer-contact-part {
+            p {
+
+                opacity: 1;
+                max-width: 60%;
+                font-size: 1.2rem;
+
+            }
+
+            p:nth-child(3) {
+                margin-top: 50px;
+                max-width: 40%;
+
+            }
+
+            a {
+                color: white;
+            }
+
+            ul {
+                li:first-child {
+                    font-size: 2rem;
+                    margin-bottom: 20px;
+                    position: relative;
+                    padding-left: 40px;
+
+                    &::after {
+                        @extend .icon-after;
+                        left: 0;
+                        width: 35px;
+                        height: 35px;
+                        background-image: url("../asstest/icons/call.svg");
+                    }
+                }
+            }
+
+            .email-anchor {
+                text-decoration: underline !important;
+            }
+        }
+    }
+
+    .footer-menu {
+        h3 {
+            font-size: 3rem;
+        }
+
+        p {
+            span {
+                a {
+                    color: white;
+                }
+            }
+        }
+
+        .mail-input {
+            position: relative;
+
+            &::after {
+                @extend .icon-after;
+                background-image: url("../asstest/icons/mail.svg");
+                width: 30px;
+                height: 30px;
+                right: 20px;
+            }
+        }
+
+        input {
+            width: 100%;
+            padding: 18px;
+            border-radius: 10px;
+            font-size: 1.25rem;
+            outline: none;
+            border: none;
+            padding-right: 50px;
+
+            &::placeholder {
+                color: black;
+            }
+        }
+
+        .footer-menu-area {
+            .footer-menu-item {
+                margin-top: 30px;
+                text-transform: capitalize;
+
+                ul {
+
+
+                    li {
+                        a {
+                            color: white;
+                            padding: 8px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+// End Footer
