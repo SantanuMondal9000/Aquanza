@@ -36,7 +36,7 @@ p {
   background-color: rgb(12, 15, 22);
 }
 .primary-blue-btn::after, .secondary-white-btn::after {
-  background-image: url("../asstest/icons/right-arrow.svg");
+  background-image: url("../asset/icons/right-arrow.svg");
   right: 15px !important;
   filter: invert(1);
   width: 15px !important;
@@ -129,7 +129,7 @@ nav ul li:hover {
   padding-left: 18px;
 }
 .header-wrapper .contact-part ul li:first-child::after {
-  background-image: url("../asstest/icons/call.svg");
+  background-image: url("../asset/icons/call.svg");
   left: 35px;
 }
 
@@ -215,7 +215,7 @@ nav ul li:hover {
   color: #3c83db;
 }
 .delivery .delivery-option .delivery-option-item a::after {
-  background-image: url("../asstest/icons/right-arrow.svg");
+  background-image: url("../asset/icons/right-arrow.svg");
 }
 
 .delivery-service .delivery-service-wrapper .delivery-service-area {
@@ -242,7 +242,7 @@ nav ul li:hover {
   padding-left: 30px;
 }
 .delivery-service .delivery-service-wrapper .delivery-service-area .delivery-service-item ul li::after {
-  background-image: url("../asstest/icons/right-icon.svg");
+  background-image: url("../asset/icons/right-icon.svg");
   left: 0;
   top: 35%;
 }
@@ -257,7 +257,7 @@ nav ul li:hover {
 }
 
 .order {
-  background-image: url("../asstest/images/Rectangle-1.png");
+  background-image: url("../asset/images/Rectangle-1.png");
   background-size: cover;
   background-position: center;
 }
@@ -326,7 +326,7 @@ nav ul li:hover {
   left: 0;
   width: 35px;
   height: 35px;
-  background-image: url("../asstest/icons/call.svg");
+  background-image: url("../asset/icons/call.svg");
 }
 .contact .contact-wrapper .contact-profile p:last-of-type {
   color: black;
@@ -431,7 +431,7 @@ footer .footer-wrapper .footer-contact-part ul li:first-child::after {
   left: 0;
   width: 35px;
   height: 35px;
-  background-image: url("../asstest/icons/call.svg");
+  background-image: url("../asset/icons/call.svg");
 }
 footer .footer-wrapper .footer-contact-part .email-anchor {
   text-decoration: underline !important;
@@ -446,7 +446,7 @@ footer .footer-menu .mail-input {
   position: relative;
 }
 footer .footer-menu .mail-input::after {
-  background-image: url("../asstest/icons/mail.svg");
+  background-image: url("../asset/icons/mail.svg");
   width: 30px;
   height: 30px;
   right: 20px;
